@@ -27,7 +27,7 @@
       background: url('/bg-htt.webp') center/cover fixed no-repeat;
       background-color: var(--paper);
     }
-    body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.2) 30%, rgba(0,0,0,.35)); }
+    body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.10) 30%, rgba(0,0,0,.20)); }
     .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
     .gradient-text { background: linear-gradient(90deg, var(--han-yellow), #22d3ee, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .seal{ border:6px solid var(--han-yellow); box-shadow:0 10px 30px rgba(0,0,0,0.35); }
@@ -40,8 +40,22 @@
 </head>
 <body class="text-white font-display relative">
 
+  <!-- HEADER / NAV -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between glass rounded-b-2xl">
+      <a href="#home" class="font-extrabold tracking-wide text-lg">HTT</a>
+      <nav class="hidden md:flex items-center gap-4 text-sm">
+        <a href="#tokenomics" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Tokenomics</a>
+        <a href="#roadmap" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Roadmap</a>
+        <a href="#community" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Community</a>
+        <a href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Whitepaper (PDF)</a>
+        <a href="#buy" class="ml-2 px-4 py-2 rounded-xl bg-white/90 text-black font-semibold hover:bg-white">Buy</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- HERO -->
-  <section id="home" class="relative overflow-hidden">
+  <section id="home" class="scroll-mt-24" class="relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 pt-20 pb-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
@@ -93,7 +107,7 @@
   </section>
 
   <!-- TOKENOMICS -->
-  <section id="tokenomics" class="py-16">
+  <section id="tokenomics" class="py-16 scroll-mt-24" class="py-16">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="k-title">Tokenomics</h2>
       <p class="mt-4 text-white/70 max-w-2xl">Network / Standard: <b>BSC</b> / <b>BEP-20</b><br>
@@ -110,7 +124,7 @@
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="py-16 bg-black/20">
+  <section id="roadmap" class="py-16 bg-black/20 scroll-mt-24" class="py-16 bg-black/20">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="k-title">Roadmap</h2>
       <ul class="mt-6 space-y-4 text-white/70">
@@ -122,8 +136,28 @@
     </div>
   </section>
 
+  <!-- BUY -->
+  <section id="buy" class="py-16 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div class="glass rounded-2xl p-6">
+        <h2 class="k-title">Buy</h2>
+        <p class="mt-2 text-white/70 text-sm">Buttons below are placeholders. After deployment, replace with your real links.</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://pancakeswap.finance/swap?outputCurrency=0xYourContractAddressHere">Swap on PancakeSwap</a>
+          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://bscscan.com/token/0xYourContractAddressHere">View on BscScan</a>
+          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://dexscreener.com/bsc">DEX Screener chart</a>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-6">
+        <h3 class="font-semibold text-xl">Mint (optional)</h3>
+        <p class="mt-2 text-white/70 text-sm">If you run a presale/mint, embed the provider’s widget here (e.g., Pinksale, Unicrypt).</p>
+        <div class="mt-4 h-40 rounded-xl bg-white/5 grid place-items-center text-white/50">Mint Widget Placeholder</div>
+      </div>
+    </div>
+  </section>
+
   <!-- COMMUNITY -->
-  <section id="community" class="py-16">
+  <section id="community" class="py-16 scroll-mt-24" class="py-16">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="k-title">Community</h2>
       <p class="mt-4 text-white/70">Follow us on X and join our Telegram/Discord to be part of the Hantang movement.</p>
@@ -136,7 +170,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-16 bg-black/20">
+  <section id="faq" class="py-16 bg-black/20 scroll-mt-24" class="py-16 bg-black/20">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="k-title">FAQ</h2>
       <div class="mt-6 space-y-4">
