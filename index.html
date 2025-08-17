@@ -48,6 +48,9 @@
     .nav-link:hover{ background: rgba(0,0,0,0.06); }
     .heading-shadow{ text-shadow:0 2px 12px rgba(0,0,0,.45); }
     .dot{ display:inline-block; width:10px; height:10px; border-radius:999px; margin-right:8px; vertical-align:middle; box-shadow:0 0 0 2px rgba(0,0,0,0.08) inset; }
+    .timeline { border-left: 3px solid var(--han-blue); padding-left: 20px; }
+    .timeline li { position: relative; margin-bottom: 20px; }
+    .timeline li:before { content: ""; position: absolute; left: -11px; top: 3px; width: 16px; height: 16px; background: var(--han-blue); border-radius: 50%; }
   </style>
 </head>
 <body class="text-white font-display relative">
@@ -86,6 +89,9 @@
           <a id="btn-whitepaper" href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="btn-knot px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Whitepaper</a>
           <a id="btn-chart" href="#tokenomics" class="px-5 py-3 rounded-xl border border-white/20 hover:border-primary/60">Tokenomics</a>
         </div>
+      </div>
+      <div class="flex justify-center">
+        <img src="/hero-coin.png" alt="HTT Character" class="max-w-xs rounded-full border-4 border-yellow-400 shadow-lg" />
       </div>
     </div>
   </section>
@@ -127,12 +133,12 @@
   <section id="roadmap" class="py-16 bg-black/20">
     <div class="max-w-6xl mx-auto px-4 card-light p-6">
       <h2 class="k-title">Roadmap</h2>
-      <ul class="mt-6 space-y-4">
-        <li>✅ Launch on BSC with community distribution</li>
-        <li>✅ Website & branding live</li>
-        <li>🔜 Listings on CoinGecko & CoinMarketCap</li>
-        <li>🔜 CEX Listings & partnerships</li>
-        <li>🔮 Expansion into global meme culture</li>
+      <ul class="timeline mt-6 space-y-6">
+        <li><b>2025 Q1:</b> ✅ Launch on BSC with community distribution</li>
+        <li><b>2025 Q2:</b> ✅ Website & branding live</li>
+        <li><b>2025 Q3:</b> 🔜 Listings on CoinGecko & CoinMarketCap</li>
+        <li><b>2025 Q4:</b> 🔜 CEX Listings & partnerships</li>
+        <li><b>2026+:</b> 🔮 Expansion into global meme culture</li>
       </ul>
     </div>
   </section>
@@ -154,43 +160,36 @@
   <section id="faq" class="py-16 bg-black/20 scroll-mt-24">
     <div class="max-w-6xl mx-auto px-4 card-light p-6">
       <h2 class="k-title">FAQ</h2>
-      <div class="mt-6 space-y-4">
+      
+      <h3 class="mt-6 font-bold text-lg">General</h3>
+      <div class="mt-4 space-y-4">
         <details class="card-light p-4 rounded-xl">
           <summary class="cursor-pointer font-semibold">What is HTT?</summary>
           <p class="mt-2">HTT (Hantang Token) is a Korean-inspired meme coin launched on BSC/BEP-20. It combines traditional aesthetics with modern crypto culture.</p>
         </details>
         <details class="card-light p-4 rounded-xl">
-          <summary class="cursor-pointer font-semibold">Is there a tax?</summary>
-          <p class="mt-2">No. HTT is a 0% tax token. What you buy is what you hold.</p>
-        </details>
-        <details class="card-light p-4 rounded-xl">
-          <summary class="cursor-pointer font-semibold">Is the liquidity locked?</summary>
-          <p class="mt-2">Yes, LP is locked and the treasury is managed with a multi-sig wallet for maximum transparency.</p>
-        </details>
-        <details class="card-light p-4 rounded-xl">
           <summary class="cursor-pointer font-semibold">Is this financial advice?</summary>
           <p class="mt-2">No. HTT is a community meme project and does not constitute financial advice.</p>
+        </details>
+      </div>
+
+      <h3 class="mt-8 font-bold text-lg">Token & Trading</h3>
+      <div class="mt-4 space-y-4">
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Is there a tax?</summary>
+          <p class="mt-2">No. HTT is a 0% tax token. What you buy is what you hold.</p>
         </details>
         <details class="card-light p-4 rounded-xl">
           <summary class="cursor-pointer font-semibold">Any taxes/fees?</summary>
           <p class="mt-2">There is no transfer tax (0%). Swaps on DEXs may incur platform/liquidity fees.</p>
         </details>
         <details class="card-light p-4 rounded-xl">
-          <summary class="cursor-pointer font-semibold">Where can I view the contract?</summary>
-          <p class="mt-2">We will publish the BscScan contract/tx links. After deployment, replace the placeholder address and buttons above.</p>
-        </details>
-        <details class="card-light p-4 rounded-xl">
-          <summary class="cursor-pointer font-semibold">How does governance work?</summary>
-          <p class="mt-2">The treasury is managed via multisig. Decisions use community voting (e.g., Snapshot) off‑chain.</p>
+          <summary class="cursor-pointer font-semibold">Is the liquidity locked?</summary>
+          <p class="mt-2">Yes, LP is locked and the treasury is managed with a multi-sig wallet for maximum transparency.</p>
         </details>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-10 text-center text-white/60 text-sm">
-    <p>© 2025 Hantang Coin (HTT). All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+      <h3 class="mt-8 font-bold text-lg">Development & Governance</h3>
+      <div class="mt-4 space-y-4">
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Where can I view the contract?</summary
