@@ -1,12 +1,12 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTT | 한탕 코인 (Hantang Token)</title>
-  <meta name="description" content="한국식 밈코인 한탕(HTT) — BEP-20(BSC) 기반, 커뮤니티 중심, 세금 없는 순수 토큰 구조." />
-  <meta property="og:title" content="HTT | 한탕 코인 (Hantang Token)" />
-  <meta property="og:description" content="한국식 밈코인 한탕(HTT) — BSC/BEP-20 기반, 커뮤니티 중심 토큰." />
+  <title>HTT | Hantang Token (Korean Meme Coin)</title>
+  <meta name="description" content="HTT (Hantang Token) — a Korean meme coin on BSC (BEP-20). Community-led, zero transfer tax, LP lock and multisig treasury." />
+  <meta property="og:title" content="HTT | Hantang Token (Korean Meme Coin)" />
+  <meta property="og:description" content="HTT (Hantang Token) — Korean meme coin vibes, community-first, zero tax." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.png" />
   <link rel="icon" href="/favicon.ico" />
@@ -14,142 +14,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0ea5e9',
-            accent: '#f59e0b',
-            dark: '#0b1020'
-          },
-          fontFamily: {
-            display: ['Noto Sans KR','Pretendard','Apple SD Gothic Neo','Inter','Segoe UI','Arial'],
-            brush: ['Black Han Sans','Gowun Batang','Noto Sans KR','sans-serif']
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.25)'
-          }
-        }
-      }
-    }
-  </script>
   <style>
     :root{
-      --han-blue:#1f3b73;  /* 곤색 */
-      --han-red:#c53b30;   /* 단청 적색 */
-      --han-green:#1aa06d; /* 청록 */
-      --han-yellow:#f2c14e;/* 황색 */
-      --ink:#0b1020;       /* 먹색 */
-      --paper:#0e1326;     /* 바탕 */
+      --han-blue:#1f3b73;
+      --han-red:#c53b30;
+      --han-green:#1aa06d;
+      --han-yellow:#f2c14e;
+      --ink:#0b1020;
+      --paper:#0e1326;
     }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
-    .fade-up { opacity: 0; transform: translateY(10px); transition: 800ms ease; }
-    .fade-up.show { opacity: 1; transform: translateY(0); }
-    .gradient-text {
-      background: linear-gradient(90deg, var(--han-yellow), #22d3ee, #f472b6);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    /* 한지 질감 + 단청 보더 느낌 */
     body{
       background: url('/bg-htt.webp') center/cover fixed no-repeat;
       background-color: var(--paper);
     }
     body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.2) 30%, rgba(0,0,0,.35)); }
-    .hanji-overlay:before{
-      content:""; position: absolute; inset:0; pointer-events:none;
-      background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"160\" height=\"160\" viewBox=\"0 0 160 160\"><g fill=\"none\" stroke=\"%23ffffff\" stroke-opacity=\"0.03\"><path d=\"M0 80 H160 M80 0 V160\"/></g></svg>') center/160px repeat;
-    }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
+    .gradient-text { background: linear-gradient(90deg, var(--han-yellow), #22d3ee, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .seal{ border:6px solid var(--han-yellow); box-shadow:0 10px 30px rgba(0,0,0,0.35); }
-    .dancheong-border{ position:relative; }
-    .dancheong-border:after{
-      content:""; position:absolute; inset: -2px; border-radius:1.2rem; padding:2px; 
-      background: conic-gradient(from 180deg, var(--han-red), var(--han-yellow), var(--han-green), var(--han-blue), var(--han-red));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-    }
     .badge{ border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.06); padding:8px 12px; border-radius:999px; }
-  .k-brush{ font-family: 'Black Han Sans', 'Gowun Batang', 'Noto Sans KR', sans-serif; letter-spacing: 0.5px; }
+    .k-brush{ font-family: 'Black Han Sans', 'Gowun Batang', 'Noto Sans KR', sans-serif; letter-spacing: 0.5px; }
     .k-title{ @apply k-brush text-3xl md:text-4xl font-extrabold; }
     .btn-knot{ display:inline-flex; align-items:center; gap:.5rem; }
     .btn-knot svg{ width:18px; height:18px; }
   </style>
 </head>
-<body class="bg-dark text-white font-display selection:bg-primary/30">
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-dark/80 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-accent"></div>
-        <span class="font-bold tracking-wide">HTT</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#tokenomics" class="hover:text-primary">Tokenomics</a>
-        <a href="#roadmap" class="hover:text-primary">로드맵</a>
-        <a href="#faq" class="hover:text-primary">FAQ</a>
-        <a href="#community" class="hover:text-primary">커뮤니티</a>
-        <a href="#buy" class="px-4 py-2 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft">구매하기</a>
-        <a href="/whitepaper.pdf" class="px-4 py-2 rounded-xl border border-white/20 hover:border-primary/60" target="_blank" rel="noreferrer noopener">백서(PDF)</a>
-      </nav>
-    </div>
-  </header>
+<body class="text-white font-display relative">
 
   <!-- HERO -->
-  <section id="home" class="relative overflow-hidden hanji-overlay">
-    <div class="absolute inset-0 opacity-30" aria-hidden>
-      <div class="absolute -top-20 -left-20 w-[40rem] h-[40rem] rounded-full blur-3xl" style="background:radial-gradient(closest-side, var(--han-green), transparent 70%)"></div>
-      <div class="absolute -bottom-32 -right-10 w-[36rem] h-[36rem] rounded-full blur-3xl" style="background:radial-gradient(closest-side, var(--han-red), transparent 70%)"></div>
-    </div>
+  <section id="home" class="relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 pt-20 pb-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-          <span class="gradient-text">HTT</span> — 한국형 밈코인의 결
+          <span class="gradient-text">HTT</span> — Korean Meme Coin, Reimagined
         </h1>
-        <p class="mt-5 text-white/80 md:text-lg">조선풍 위트, 현대적 밈. 즐기되, 투명하게. 커뮤니티가 함께 만드는 한탕(HTT).</p>
+        <p class="mt-5 text-white/80 md:text-lg">Joseon aesthetics, modern memes. Have fun, stay transparent. Built with the community.</p>
         <div class="mt-6 flex flex-wrap gap-2">
-          <span class="badge">#세금없음</span>
-          <span class="badge">#LP락업</span>
-          <span class="badge">#멀티시그</span>
-          <span class="badge">#커뮤니티주도</span>
+          <span class="badge">#ZeroTax</span>
+          <span class="badge">#LPLocked</span>
+          <span class="badge">#Multisig</span>
+          <span class="badge">#CommunityLed</span>
         </div>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a id="btn-buy" href="#buy" class="px-5 py-3 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft dancheong-border"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm0 3.2a1 1 0 0 0-.8.4L7 10.4a1 1 0 0 0 1.6 1.2l2.1-2.8V18a1 1 0 1 0 2 0v-9.2l2.1 2.8a1 1 0 0 0 1.6-1.2l-4.2-4.8a1 1 0 0 0-.8-.4Z"/></svg>지금 구매</a>
-          <a id="btn-whitepaper" href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm-1.2 6h2.4a.8.8 0 0 1 .8.8v6.4a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1-.8-.8V8.8a.8.8 0 0 1 .8-.8Z"/></svg>백서 PDF</a>
-          <a id="btn-chart" href="#tokenomics" class="px-5 py-3 rounded-xl border border-white/20 hover:border-primary/60">토크노믹스</a>
+          <a id="btn-buy" href="#buy" class="btn-knot px-5 py-3 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm0 3.2a1 1 0 0 0-.8.4L7 10.4a1 1 0 0 0 1.6 1.2l2.1-2.8V18a1 1 0 1 0 2 0v-9.2l2.1 2.8a1 1 0 0 0 1.6-1.2l-4.2-4.8a1 1 0 0 0-.8-.4Z"/></svg>
+            Buy Now
+          </a>
+          <a id="btn-whitepaper" href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="btn-knot px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm-1.2 6h2.4a.8.8 0 0 1 .8.8v6.4a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1-.8-.8V8.8a.8.8 0 0 1 .8-.8Z"/></svg>
+            Whitepaper (PDF)
+          </a>
+          <a id="btn-chart" href="#tokenomics" class="px-5 py-3 rounded-xl border border-white/20 hover:border-primary/60">Tokenomics</a>
         </div>
         <div class="mt-6 p-3 glass rounded-2xl inline-flex items-center gap-3 text-sm">
-          <span class="text-white/60">컨트랙트 주소</span>
+          <span class="text-white/60">Contract</span>
           <code id="contract" class="text-xs md:text-sm">0xYourContractAddressHere</code>
-          <button id="copy" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20">복사</button>
-          <span id="copied" class="hidden text-primary">복사됨!</span>
+          <button id="copy" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20">Copy</button>
+          <span id="copied" class="hidden text-primary">Copied!</span>
         </div>
-        <p class="mt-3 text-xs text-white/50">※ 가상자산은 변동성이 큽니다. 자신의 책임 하에 참여하세요.</p>
+        <p class="mt-3 text-xs text-white/50">※ Crypto assets are highly volatile. Participate at your own risk.</p>
       </div>
       <div class="relative flex items-center justify-center">
-        <!-- 영정 스타일 코인 아바타: /hero-coin.png 를 업로드하면 적용됨 -->
         <div class="w-[22rem] h-[22rem] rounded-full seal overflow-hidden glass flex items-center justify-center">
           <img src="/hero-coin.png" alt="HTT Coin" class="w-full h-full object-cover" />
         </div>
-        <div class="absolute -bottom-6 -right-6 px-4 py-2 rounded-xl bg-[color:var(--han-yellow)] text-black font-bold shadow-soft">한탕각⚡</div>
-      </div>
-    </div>
-    
-  </section>
-
-  <!-- WHITEPAPER -->
-  <section id="whitepaper" class="py-20 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="k-title">백서</h2>
-        <p class="mt-4 text-white/80">한탕 코인의 비전, 토크노믹스, 로드맵을 한 눈에. 최신 버전의 PDF 백서를 내려받아 확인하세요.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="px-5 py-3 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft">백서 다운로드 (PDF)</a>
-          <a href="https://x.com/hantangcoin" target="_blank" rel="noreferrer noopener" class="px-5 py-3 rounded-xl border border-white/20 hover:border-primary/60">업데이트 소식(X)</a>
-        </div>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <div class="aspect-video rounded-xl bg-white/5 grid place-items-center text-white/50">Whitepaper Preview</div>
-        <p class="mt-3 text-xs text-white/50">※ `whitepaper.pdf` 파일을 저장소 루트(또는 /public)에 업로드하면 위 버튼이 작동합니다.</p>
+        <div class="absolute -bottom-6 -right-6 px-4 py-2 rounded-xl bg-[color:var(--han-yellow)] text-black font-bold shadow-soft">Hantang ⚡</div>
       </div>
     </div>
   </section>
@@ -157,173 +85,99 @@
   <!-- SOCIAL PROOF / BADGES -->
   <section class="py-8">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="glass rounded-xl py-4">⚡️ 세금 0%</div>
-      <div class="glass rounded-xl py-4">🧻 LP 락업</div>
-      <div class="glass rounded-xl py-4">🤝 커뮤니티 거버넌스</div>
-      <div class="glass rounded-xl py-4">🔒 멀티시그 트레저리</div>
+      <div class="glass rounded-xl py-4">⚡️ 0% Tax</div>
+      <div class="glass rounded-xl py-4">🧻 LP Locked</div>
+      <div class="glass rounded-xl py-4">🤝 Community Governance</div>
+      <div class="glass rounded-xl py-4">🔒 Multisig Treasury</div>
     </div>
   </section>
 
   <!-- TOKENOMICS -->
-  <section id="tokenomics" class="py-20 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="k-title">Tokenomics</h2>
-        <ul class="mt-6 space-y-3 text-white/85">
-          <li>네트워크 / 표준: <b>BSC</b> / <b>BEP-20</b></li>
-          <li>총 공급량(가정): <b>54,000,000,000,000</b> HTT</li>
-          <li>분배(예정):
-            <ul class="list-disc list-inside mt-2 space-y-1">
-              <li>커뮤니티 에어드랍 & 바이럴: <b>40%</b></li>
-              <li>DAO 트레저리(멀티시그): <b>30%</b></li>
-              <li>마케팅 & 인플루언서: <b>10%</b></li>
-              <li>초기 유동성(DEX/LP): <b>10%</b></li>
-              <li>예비/소각/기타: <b>10%</b></li>
-            </ul>
-          </li>
-        </ul>
-        <p class="mt-4 text-sm text-white/60">※ 총량/비율은 백서 확정 후 조정될 수 있습니다. 현재 페이지는 <b>54조</b>로 가정 표기했습니다.</p>
-      </div>
-      <div class="flex items-center justify-center">
-        <svg viewBox="0 0 42 42" class="w-56 h-56">
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#0ea5e9" stroke-width="6" stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#f59e0b" stroke-width="6" stroke-dasharray="30 70" stroke-dashoffset="-15"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#a78bfa" stroke-width="6" stroke-dasharray="10 90" stroke-dashoffset="-48"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#34d399" stroke-width="6" stroke-dasharray="10 90" stroke-dashoffset="-60"></circle>
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#ef4444" stroke-width="6" stroke-dasharray="10 90" stroke-dashoffset="-72"></circle>
-          <g font-size="3" fill="white" text-anchor="middle">
-            <text x="21" y="21" dominant-baseline="middle" class="fill-white">HTT</text>
-          </g>
-        </svg>
-      </div>
+  <section id="tokenomics" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="k-title">Tokenomics</h2>
+      <p class="mt-4 text-white/70 max-w-2xl">Network / Standard: <b>BSC</b> / <b>BEP-20</b><br>
+      Total Supply (tentative): <b>54,000,000,000,000</b> HTT</p>
+      <ul class="mt-4 text-white/70 space-y-2">
+        <li>Community airdrops & viral growth: <b>40%</b></li>
+        <li>DAO treasury (multisig): <b>30%</b></li>
+        <li>Marketing & creators: <b>10%</b></li>
+        <li>Initial liquidity (DEX/LP): <b>10%</b></li>
+        <li>Reserve/burn/misc: <b>10%</b></li>
+      </ul>
+      <p class="mt-2 text-xs text-white/50">※ Supply/splits may adjust with the final whitepaper. This page currently assumes <b>54T</b> supply.</p>
     </div>
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="py-20 border-t border-white/10">
+  <section id="roadmap" class="py-16 bg-black/20">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="k-title">로드맵</h2>
-      <div class="mt-8 grid md:grid-cols-4 gap-6">
-        <div class="glass rounded-2xl p-6 fade-up">
-          <h3 class="font-bold text-xl">2025.08 — 채널 오픈</h3>
-          <ul class="mt-3 text-white/80 space-y-2 list-disc list-inside">
-            <li>HTT 공식 웹 / X / 텔레그램 오픈</li>
-            <li>브랜드 가이드 / 밈 콘테스트 준비</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6 fade-up">
-          <h3 class="font-bold text-xl">2025.09 — 토큰 발행</h3>
-          <ul class="mt-3 text-white/80 space-y-2 list-disc list-inside">
-            <li>BEP-20 컨트랙트 공개</li>
-            <li>에어드랍 캠페인 시작</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6 fade-up">
-          <h3 class="font-bold text-xl">2025.10 — DEX/LP</h3>
-          <ul class="mt-3 text-white/80 space-y-2 list-disc list-inside">
-            <li>PancakeSwap LP 생성</li>
-            <li>커뮤니티 마케팅</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6 fade-up">
-          <h3 class="font-bold text-xl">2025.11+ — DAO 전환</h3>
-          <ul class="mt-3 text-white/80 space-y-2 list-disc list-inside">
-            <li>Snapshot 거버넌스</li>
-            <li>멀티시그 운영 / 외부 협업</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUY -->
-  <section id="buy" class="py-20 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
-      <div class="glass rounded-2xl p-6">
-        <h3 class="text-2xl font-bold">구매하기</h3>
-        <p class="mt-2 text-white/70 text-sm">아래 버튼은 예시 링크입니다. 컨트랙트 배포 후 실제 PancakeSwap/BscScan/DEX Screener 링크로 교체하세요.</p>
-        <div class="mt-4 flex flex-wrap gap-3">
-          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://pancakeswap.finance/swap?outputCurrency=0xYourContractAddressHere">PancakeSwap에서 스왑</a>
-          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://bscscan.com/token/0xYourContractAddressHere">BscScan 컨트랙트</a>
-          <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" target="_blank" rel="noreferrer" href="https://dexscreener.com/bsc">DEX Screener 차트</a>
-        </div>
-      </div>
-      <div id="mint" class="glass rounded-2xl p-6">
-        <h3 class="text-2xl font-bold">민팅(옵션)</h3>
-        <p class="mt-2 text-white/70 text-sm">사전 판매/민팅을 진행할 경우, 여기 위젯을 넣으세요. (예: Pinksale, Unicrypt 등)</p>
-        <div class="mt-4 h-40 rounded-xl bg-white/5 grid place-items-center text-white/50">Mint Widget Placeholder</div>
-      </div>
+      <h2 class="k-title">Roadmap</h2>
+      <ul class="mt-6 space-y-4 text-white/70">
+        <li>2025.08 — Channels live (Website, X, Telegram)</li>
+        <li>2025.09 — Token launch & BEP-20 contract published; kick off airdrop campaign</li>
+        <li>2025.10 — PancakeSwap LP created; community-led marketing</li>
+        <li>2025.11+ — DAO transition (Snapshot governance, multisig operations, partnerships)</li>
+      </ul>
     </div>
   </section>
 
   <!-- COMMUNITY -->
-  <section id="community" class="py-16 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="k-title">커뮤니티</h2>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" href="https://x.com/hantangcoin" target="_blank" rel="noreferrer">X (Twitter)</a>
-        <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" href="https://t.me/" target="_blank" rel="noreferrer">Telegram</a>
-        <a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20" href="#" target="_blank" rel="noreferrer">디스코드</a>
+  <section id="community" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="k-title">Community</h2>
+      <p class="mt-4 text-white/70">Follow us on X and join our Telegram/Discord to be part of the Hantang movement.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="https://x.com/hantangcoin" target="_blank" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Twitter (X)</a>
+        <a href="#" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Telegram</a>
+        <a href="#" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Discord</a>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-20 border-t border-white/10">
+  <section id="faq" class="py-16 bg-black/20">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="k-title">FAQ</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h3 class="font-bold">투자 조언인가요?</h3>
-          <p class="mt-2 text-white/80 text-sm">아닙니다. HTT는 순수 밈 프로젝트이며 투자 조언이 아닙니다.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="font-bold">세금/수수료는?</h3>
-          <p class="mt-2 text-white/80 text-sm">토큰 전송 세금은 없습니다(0%). 다만 DEX에서 스왑 시 플랫폼 수수료가 있을 수 있습니다.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="font-bold">컨트랙트는 어디서 보나요?</h3>
-          <p class="mt-2 text-white/80 text-sm">BscScan 컨트랙트/트랜잭션 링크를 공개합니다. 배포 후 상단 주소/버튼을 교체하세요.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h3 class="font-bold">거버넌스는 어떻게?</h3>
-          <p class="mt-2 text-white/80 text-sm">DAO 트레저리는 멀티시그로 관리되며, Snapshot 등 오프체인 투표로 의사결정을 진행합니다.</p>
-        </div>
+      <div class="mt-6 space-y-4">
+        <details class="glass p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Is this financial advice?</summary>
+          <p class="mt-2 text-white/70">No. HTT is a community meme project and does not constitute financial advice.</p>
+        </details>
+        <details class="glass p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Any taxes/fees?</summary>
+          <p class="mt-2 text-white/70">There is no transfer tax (0%). Swaps on DEXs may incur platform/liquidity fees.</p>
+        </details>
+        <details class="glass p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Where can I view the contract?</summary>
+          <p class="mt-2 text-white/70">We will publish the BscScan contract/tx links. After deployment, replace the placeholder address and buttons above.</p>
+        </details>
+        <details class="glass p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">How does governance work?</summary>
+          <p class="mt-2 text-white/70">The treasury is managed via multisig. Decisions use community voting (e.g., Snapshot) off‑chain.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITEPAPER -->
+  <section id="whitepaper" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="k-title">Whitepaper</h2>
+      <p class="mt-4 text-white/70">All in one place — vision, tokenomics and roadmap. Download the latest PDF.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="/whitepaper.pdf" target="_blank" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Download Whitepaper (PDF)</a>
+        <a href="https://x.com/hantangcoin" target="_blank" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Updates on X</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-white/60">
-      <p>© <span id="year"></span> HTT. 본 웹사이트는 엔터테인먼트/커뮤니티 목적이며, 어떠한 투자 수익도 보장하지 않습니다.</p>
-      <p class="mt-2">법적 고지: 국내 규제를 준수하세요. 광고/판매 시 관련 법령(특금법, 표시·광고법 등)을 확인하십시오.</p>
-    </div>
+  <footer class="py-10 text-center text-white/60 text-sm">
+    <p>Legal notice: Comply with local regulations. No investment returns are promised; promotions must follow applicable laws.</p>
+    <p class="mt-2">This website is for entertainment/community purposes only and does not guarantee any returns.</p>
+    <p class="mt-2">© 2025 Hantang Token (HTT). All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const btnCopy = document.getElementById('copy');
-    btnCopy?.addEventListener('click', async () => {
-      const ca = document.getElementById('contract').textContent.trim();
-      try { await navigator.clipboard.writeText(ca); } catch {}
-      document.getElementById('copied').classList.remove('hidden');
-      setTimeout(()=>document.getElementById('copied').classList.add('hidden'),1200);
-    });
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); })
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const id = a.getAttribute('href');
-        if(id && id !== '#'){
-          e.preventDefault();
-          document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-      })
-    })
-  </script>
 </body>
 </html>
