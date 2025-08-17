@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTT | Hantang Token (Korean Meme Coin)</title>
-  <meta name="description" content="HTT (Hantang Token) — a Korean meme coin on BSC (BEP-20). Community-led, zero transfer tax, LP lock and multisig treasury." />
-  <meta property="og:title" content="HTT | Hantang Token (Korean Meme Coin)" />
-  <meta property="og:description" content="HTT (Hantang Token) — Korean meme coin vibes, community-first, zero tax." />
+  <title>HTT | Hantang Coin (Meme Token)</title>
+  <meta name="description" content="HTT (Hantang Token) — A Korean-style meme coin on BSC/BEP-20. Community-driven, transparent, and fun." />
+  <meta property="og:title" content="HTT | Hantang Coin (Meme Token)" />
+  <meta property="og:description" content="HTT (Hantang Token) — A Korean-inspired meme coin on BSC/BEP-20. Community-driven and fair." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.png" />
   <link rel="icon" href="/favicon.ico" />
@@ -22,108 +22,71 @@
       --han-yellow:#f2c14e;
       --ink:#0b1020;
       --paper:#0e1326;
-    }
-    body{
-      background: url('/bg-htt.webp') center/cover fixed no-repeat;
-      background-color: var(--paper);
-    }
-    body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.06) 30%, rgba(0,0,0,.12)); }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
-    .gradient-text { background: linear-gradient(90deg, var(--han-yellow), #22d3ee, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .seal{ border:6px solid var(--han-yellow); box-shadow:0 10px 30px rgba(0,0,0,0.35); }
-    .badge{ border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.06); padding:8px 12px; border-radius:999px; }
-    .k-brush{ font-family: 'Black Han Sans', 'Gowun Batang', 'Noto Sans KR', sans-serif; letter-spacing: 0.5px; }
-    .k-title{ font-family: 'Black Han Sans','Noto Sans KR',sans-serif; font-size:2rem; font-weight:900; color:#0b0f19; text-shadow:0 2px 4px rgba(255,255,255,0.6), 0 2px 6px rgba(0,0,0,0.6); }
-    .btn-knot{ display:inline-flex; align-items:center; gap:.5rem; }
-    .btn-knot svg{ width:18px; height:18px; }
-    .text-dark{color:#0b0f19}
-    .card-light{ background: rgba(255,255,255,0.85); color:#0b0f19; box-shadow:0 10px 30px rgba(0,0,0,0.25); border-radius:1.25rem; backdrop-filter: blur(10px); }
-    .card-light :is(h1,h2,h3,h4,h5,h6,p,li,small,code){ color:#0b0f19; }
-    .card-light .badge{ background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.12); color:#0b0f19; }
-    .dot{ display:inline-block; width:10px; height:10px; border-radius:999px; margin-right:8px; vertical-align:middle; box-shadow:0 0 0 2px rgba(0,0,0,0.08) inset; }
-    :root{
       --seg-community: var(--han-blue);
       --seg-treasury:  var(--han-red);
       --seg-marketing: #a78bfa;
       --seg-liquidity: var(--han-green);
       --seg-reserve:   #ef4444;
     }
+    body{
+      background: url('/bg-htt.webp') center/cover fixed no-repeat;
+      background-color: var(--paper);
+    }
+    body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.10) 30%, rgba(0,0,0,.20)); }
     body:after{ content:""; position:fixed; inset:0; pointer-events:none; background:rgba(255,255,255,0.10); }
-    nav a{ color:white; font-weight:600; text-shadow:0 1px 2px rgba(0,0,0,0.7); }
-    nav a:hover{ color:var(--han-yellow); }
-    h1,h2,h3,h4{ font-weight:900; color:#0b0f19; text-shadow:0 2px 6px rgba(255,255,255,0.7),0 2px 8px rgba(0,0,0,0.6); }
-    p, li, small{ font-weight:500; }
-  .k-title{ font-family: 'Black Han Sans','Gowun Batang','Noto Sans KR',sans-serif; font-weight: 900; font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem); line-height: 1.1; letter-spacing: .3px; color:#ffffff; text-shadow:0 3px 14px rgba(0,0,0,.5); }
-.card-light .k-title{ color:#0b0f19; text-shadow:none; }
-.gradient-text{ -webkit-text-stroke:.8px rgba(0,0,0,.35); font-weight:900; }
-h1{ font-weight:900; letter-spacing:.2px; }
-</style>
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.06); }
+    .gradient-text { background: linear-gradient(90deg, var(--han-yellow), #22d3ee, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke:.8px rgba(0,0,0,.35); font-weight:900; }
+    .seal{ border:6px solid var(--han-yellow); box-shadow:0 10px 30px rgba(0,0,0,0.35); }
+    .badge{ border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.06); padding:8px 12px; border-radius:999px; }
+    .k-brush{ font-family: 'Black Han Sans', 'Gowun Batang', 'Noto Sans KR', sans-serif; letter-spacing: 0.5px; }
+    .k-title{ font-family:'Black Han Sans','Gowun Batang','Noto Sans KR',sans-serif; font-weight:900; font-size:clamp(2rem,1.5rem+2vw,2.75rem); line-height:1.1; letter-spacing:.3px; color:#fff; text-shadow:0 3px 14px rgba(0,0,0,.5); }
+    .card-light{ background: rgba(255,255,255,0.78); color:#0b0f19; box-shadow:0 10px 30px rgba(0,0,0,0.25); border-radius:1.25rem; backdrop-filter: blur(10px); }
+    .card-light :is(h1,h2,h3,h4,h5,h6,p,li,small,code){ color:#0b0f19; }
+    .card-light .badge{ background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.12); color:#0b0f19; }
+    .nav-bar{ background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom:1px solid rgba(0,0,0,0.08); color:#0b0f19; }
+    .nav-link{ color:#0b0f19; }
+    .nav-link:hover{ background: rgba(0,0,0,0.06); }
+    .heading-shadow{ text-shadow:0 2px 12px rgba(0,0,0,.45); }
+    .dot{ display:inline-block; width:10px; height:10px; border-radius:999px; margin-right:8px; vertical-align:middle; box-shadow:0 0 0 2px rgba(0,0,0,0.08) inset; }
+  </style>
 </head>
 <body class="text-white font-display relative">
 
-  <!-- HEADER / NAV -->
+  <!-- NAV -->
   <header class="fixed top-0 inset-x-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between glass rounded-b-2xl">
-      <a href="#home" class="font-extrabold tracking-wide text-lg">HTT</a>
-      <nav class="hidden md:flex items-center gap-4 text-sm">
-        <a href="#tokenomics" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Tokenomics</a>
-        <a href="#roadmap" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Roadmap</a>
-        <a href="#community" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Community</a>
-        <a href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="px-3 py-1.5 rounded-lg hover:bg-white/10">Whitepaper (PDF)</a>
-        <a href="#buy" class="ml-2 px-4 py-2 rounded-xl bg-white/90 text-black font-semibold hover:bg-white">Buy</a>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between nav-bar rounded-b-2xl">
+      <div class="font-extrabold text-lg">HTT</div>
+      <nav class="flex gap-2 text-sm font-semibold">
+        <a href="#tokenomics" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">Tokenomics</a>
+        <a href="#roadmap" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">Roadmap</a>
+        <a href="#community" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">Community</a>
+        <a href="#faq" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">FAQ</a>
+        <a href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">Whitepaper</a>
+        <a href="#buy" class="px-3 py-1.5 rounded-lg nav-link hover:bg-black/5">Buy</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="home" class="scroll-mt-24" class="relative overflow-hidden">
+  <section id="home" class="relative overflow-hidden pt-24">
     <div class="max-w-6xl mx-auto px-4 pt-20 pb-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-          <span class="gradient-text">HTT</span> — Korean Meme Coin, Reimagined
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight heading-shadow">
+          <span class="gradient-text">HTT</span> — The Korean Meme Coin
         </h1>
-        <p class="mt-5 text-white/80 md:text-lg">Joseon aesthetics, modern memes. Have fun, stay transparent. Built with the community.</p>
+        <p class="mt-5 card-light p-4 rounded-xl inline-block text-dark md:text-lg">Blending traditional Korean aesthetics with modern meme culture. Transparent, community-driven, and fun.</p>
         <div class="mt-6 flex flex-wrap gap-2">
-          <span class="badge">#ZeroTax</span>
-          <span class="badge">#LPLocked</span>
-          <span class="badge">#Multisig</span>
-          <span class="badge">#CommunityLed</span>
+          <span class="badge">#NoTax</span>
+          <span class="badge">#LockedLP</span>
+          <span class="badge">#MultiSig</span>
+          <span class="badge">#CommunityFirst</span>
         </div>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a id="btn-buy" href="#buy" class="btn-knot px-5 py-3 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm0 3.2a1 1 0 0 0-.8.4L7 10.4a1 1 0 0 0 1.6 1.2l2.1-2.8V18a1 1 0 1 0 2 0v-9.2l2.1 2.8a1 1 0 0 0 1.6-1.2l-4.2-4.8a1 1 0 0 0-.8-.4Z"/></svg>
-            Buy Now
-          </a>
-          <a id="btn-whitepaper" href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="btn-knot px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c5.522 0 10 4.477 10 10S17.522 22 12 22 2 17.523 2 12 6.478 2 12 2Zm-1.2 6h2.4a.8.8 0 0 1 .8.8v6.4a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1-.8-.8V8.8a.8.8 0 0 1 .8-.8Z"/></svg>
-            Whitepaper (PDF)
-          </a>
+          <a id="btn-buy" href="#buy" class="btn-knot px-5 py-3 rounded-xl bg-primary text-dark font-semibold hover:brightness-110 shadow-soft">Buy Now</a>
+          <a id="btn-whitepaper" href="/whitepaper.pdf" target="_blank" rel="noreferrer noopener" class="btn-knot px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Whitepaper</a>
           <a id="btn-chart" href="#tokenomics" class="px-5 py-3 rounded-xl border border-white/20 hover:border-primary/60">Tokenomics</a>
         </div>
-        <div class="mt-6 p-3 glass rounded-2xl inline-flex items-center gap-3 text-sm">
-          <span class="text-white/60">Contract</span>
-          <code id="contract" class="text-xs md:text-sm">0xYourContractAddressHere</code>
-          <button id="copy" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20">Copy</button>
-          <span id="copied" class="hidden text-primary">Copied!</span>
-        </div>
-        <p class="mt-3 text-xs text-white/50">※ Crypto assets are highly volatile. Participate at your own risk.</p>
       </div>
-      <div class="relative flex items-center justify-center">
-        <div class="w-[22rem] h-[22rem] rounded-full seal overflow-hidden glass flex items-center justify-center">
-          <img src="/hero-coin.png" alt="HTT Coin" class="w-full h-full object-cover" />
-        </div>
-        <div class="absolute -bottom-6 -right-6 px-4 py-2 rounded-xl bg-[color:var(--han-yellow)] text-black font-bold shadow-soft">Hantang ⚡</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF / BADGES -->
-  <section class="py-8">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="glass rounded-xl py-4">⚡️ 0% Tax</div>
-      <div class="glass rounded-xl py-4">🧻 LP Locked</div>
-      <div class="glass rounded-xl py-4">🤝 Community Governance</div>
-      <div class="glass rounded-xl py-4">🔒 Multisig Treasury</div>
     </div>
   </section>
 
@@ -132,8 +95,7 @@ h1{ font-weight:900; letter-spacing:.2px; }
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div class="card-light p-6">
         <h2 class="k-title">Tokenomics</h2>
-        <p class="mt-4 max-w-prose">Network / Standard: <b>BSC</b> / <b>BEP-20</b><br>
-          Total Supply (tentative): <b>54,000,000,000,000</b> HTT</p>
+        <p class="mt-4 max-w-prose">Network / Standard: <b>BSC</b> / <b>BEP-20</b><br>Total Supply (tentative): <b>54,000,000,000,000</b> HTT</p>
         <ul class="mt-4 space-y-2">
           <li><span class="dot" style="background:var(--seg-community)"></span>Community airdrops & viral growth: <b>40%</b></li>
           <li><span class="dot" style="background:var(--seg-treasury)"></span>DAO treasury (multisig): <b>30%</b></li>
@@ -143,37 +105,92 @@ h1{ font-weight:900; letter-spacing:.2px; }
         </ul>
         <small class="mt-3 block opacity-70">※ Supply/splits may adjust with the final whitepaper. This page currently assumes <b>54T</b> supply.</small>
       </div>
-
       <div class="card-light p-6">
         <div class="flex items-center justify-center">
           <svg viewBox="0 0 42 42" class="w-64 h-64">
             <circle cx="21" cy="21" r="15.915" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="6"></circle>
             <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-community)" stroke-width="6" stroke-linecap="round" stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
-            <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-treasury)"  stroke-width="6" stroke-linecap="round" stroke-dasharray="30 70" stroke-dashoffset="-15"></circle>
+            <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-treasury)" stroke-width="6" stroke-linecap="round" stroke-dasharray="30 70" stroke-dashoffset="-15"></circle>
             <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-marketing)" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 90" stroke-dashoffset="-48"></circle>
             <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-liquidity)" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 90" stroke-dashoffset="-60"></circle>
-            <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-reserve)"   stroke-width="6" stroke-linecap="round" stroke-dasharray="10 90" stroke-dashoffset="-72"></circle>
+            <circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--seg-reserve)" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 90" stroke-dashoffset="-72"></circle>
             <g font-size="3" fill="#0b0f19" text-anchor="middle">
-              <text x="21" y="21" dominant-baseline="middle">HTT\n54T</text>
+              <text x="21" y="21" dominant-baseline="middle">HTT 54T</text>
             </g>
           </svg>
-        </div>
-        <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-          <div><span class="dot" style="background:var(--seg-community)"></span>Community — <b>40%</b></div>
-          <div><span class="dot" style="background:var(--seg-treasury)"></span>Treasury — <b>30%</b></div>
-          <div><span class="dot" style="background:var(--seg-marketing)"></span>Marketing — <b>10%</b></div>
-          <div><span class="dot" style="background:var(--seg-liquidity)"></span>Liquidity — <b>10%</b></div>
-          <div><span class="dot" style="background:var(--seg-reserve)"></span>Reserve — <b>10%</b></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="py-16 bg-black/20 scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4">
+  <section id="roadmap" class="py-16 bg-black/20">
+    <div class="max-w-6xl mx-auto px-4 card-light p-6">
       <h2 class="k-title">Roadmap</h2>
-      <ul class="mt-6 space-y-4 text-white/70">
-        <li>2025.08 — Channels live (Website, X, Telegram)</li>
-        <li>2025.09 — Token launch & BEP-20 contract published; kick off airdrop campaign</li>
-        <li>2025.10 — PancakeSwap
+      <ul class="mt-6 space-y-4">
+        <li>✅ Launch on BSC with community distribution</li>
+        <li>✅ Website & branding live</li>
+        <li>🔜 Listings on CoinGecko & CoinMarketCap</li>
+        <li>🔜 CEX Listings & partnerships</li>
+        <li>🔮 Expansion into global meme culture</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center card-light p-6">
+      <h2 class="k-title">Join the Community</h2>
+      <p class="mt-4">Follow us on X and join our Telegram/Discord to be part of the Hantang movement.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="https://x.com/hantangcoin" target="_blank" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Twitter (X)</a>
+        <a href="#" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Telegram</a>
+        <a href="#" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20">Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-black/20 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 card-light p-6">
+      <h2 class="k-title">FAQ</h2>
+      <div class="mt-6 space-y-4">
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">What is HTT?</summary>
+          <p class="mt-2">HTT (Hantang Token) is a Korean-inspired meme coin launched on BSC/BEP-20. It combines traditional aesthetics with modern crypto culture.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Is there a tax?</summary>
+          <p class="mt-2">No. HTT is a 0% tax token. What you buy is what you hold.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Is the liquidity locked?</summary>
+          <p class="mt-2">Yes, LP is locked and the treasury is managed with a multi-sig wallet for maximum transparency.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Is this financial advice?</summary>
+          <p class="mt-2">No. HTT is a community meme project and does not constitute financial advice.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Any taxes/fees?</summary>
+          <p class="mt-2">There is no transfer tax (0%). Swaps on DEXs may incur platform/liquidity fees.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">Where can I view the contract?</summary>
+          <p class="mt-2">We will publish the BscScan contract/tx links. After deployment, replace the placeholder address and buttons above.</p>
+        </details>
+        <details class="card-light p-4 rounded-xl">
+          <summary class="cursor-pointer font-semibold">How does governance work?</summary>
+          <p class="mt-2">The treasury is managed via multisig. Decisions use community voting (e.g., Snapshot) off‑chain.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-white/60 text-sm">
+    <p>© 2025 Hantang Coin (HTT). All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
